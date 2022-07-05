@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Asap&family=Cedarville+Cursive&family=Open+Sans:ital,wght@0,300;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+section{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 5px 10px;
+}
+
+.clock {
+  position: relative;
+  margin: 20px auto;
+  width: 250px;
+  height: 250px;
+  padding: 5px;
+  border: 5px solid black;
+  transform: rotate(90deg);
+  border-radius: 50%;
+  box-shadow: 4px 12px 20px rgba(0, 0, 0, 0.1);
+}
+.clock .numbers {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(minmax(auto));
+  width: 100%;
+  height: 100%;
+}
+.clock .numbers li {
+  grid-column: 1/13;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(270deg);
+  font-size: small;
+  padding: 5px;
+}
+.clock .numbers #zero {
+  grid-column: 1/2;
+  grid-row: 4;
+  justify-self: left;
+  align-self: flex-start;
+}
+.clock .numbers #one {
+  grid-column: 2/3;
+  grid-row: 2;
+  justify-self: left;
+}
+.clock .numbers #two {
+  grid-column: 4/5;
+  grid-row: 1;
+  justify-self: left;
+}
+.clock .numbers #three {
+  grid-row: 1;
+  align-self: flex-start;
+}
+.clock .numbers #four {
+  grid-column: 9/10;
+  grid-row: 1;
+  justify-self: right;
+}
+.clock .numbers #five {
+  grid-column: 11/12;
+  grid-row: 2;
+  justify-self: right;
+}
+.clock .numbers #six {
+  grid-column: 12/13;
+  grid-row: 4;
+  justify-self: right;
+  align-self: flex-start;
+}
+.clock .numbers #seven {
+  grid-column: 11/12;
+  grid-row: 5;
+  justify-self: right;
+}
+.clock .numbers #eight {
+  grid-column: 9/10;
+  grid-row: 6;
+  justify-self: right;
+}
+.clock .numbers #nine {
+  grid-row: 6;
+  align-self: flex-end;
+}
+.clock .numbers #ten {
+  grid-column: 4/5;
+  grid-row: 6;
+  justify-self: left;
+}
+.clock .numbers #eleven {
+  grid-column: 2/3;
+  grid-row: 5;
+  justify-self: left;
+}
+.clock .hands {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.7, 0.7);
+}
+.clock .hands .hand {
+  width: 50%;
+  height: 1px;
+  background:  black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+}
+.clock .hands .hour-hand {
+  width: 30%;
+  margin-left: 50px;
+}
+.clock .hands .second-hand {
+  height: 3px;
+}
+h1,p{
+  margin: 40px auto;
+  text-align: center;
+}
